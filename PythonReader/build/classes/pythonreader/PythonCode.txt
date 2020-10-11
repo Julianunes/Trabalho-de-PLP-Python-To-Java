@@ -1,0 +1,37 @@
+idade = int(input("Idade:"))
+obeso = False
+peso = float(input("Peso:"))
+altura = float(input("Altura:"))
+sexo = input("Sexo:")        
+imc = peso / (altura * altura)        
+if sexo == 'f' or sexo == 'F':
+  if imc < 19.1:
+    print("Você está abaixo do peso")
+  elif imc < 25.8:
+    print("Você está com o peso ideal")
+  elif imc < 27.3:
+    print("Você está um pouco acima do peso")
+  elif imc < 31.1:
+    print("Você está acima do peso")
+  elif imc > 31.1:
+    print("Você está obesa")
+    obeso = True
+
+elif sexo == 'm' or sexo == 'M':
+  if imc < 20.7:
+    print("Você está abaixo do peso")
+  elif imc < 26.4: 
+    print("Você está com o peso ideal")
+  elif imc < 27.8: 
+    print("Você está um pouco acima do peso")
+  elif imc < 33.3: 
+    print("Você está acima do peso")
+  elif imc > 33.3:
+    print("Você está obeso")
+    obeso = True
+
+else:
+    print("Genero não definido")
+
+if obeso and idade <= 12:
+    print("Você também possui obesidade infantil")
